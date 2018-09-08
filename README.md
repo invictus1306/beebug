@@ -10,6 +10,8 @@
 ## Description
 **beebug** is a tool that can be used to verify if a program crash could be exploitable.
 
+This tool was presented at [r2con](https://rada.re/con/2018/) 2018 in Barcelona.
+
 Some implemented functionality are:
 * Stack overflow on libc 
 * Crash on Program Counter
