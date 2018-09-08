@@ -1,0 +1,1 @@
+dangerous_signals = ["SIGSEGV", "SIGABRT", "SIGBUS", "SIGILL", "SIGSYS", "SIGFPE"]
