@@ -1,0 +1,117 @@
+Module name simple_test - Full path /home/invictus1306/Documents/article/functrace/tests/simple_test 
+Offset: 200e20 Name: __JCR_LIST__
+Offset: 5e0 Name: deregister_tm_clones
+Offset: 620 Name: register_tm_clones
+Offset: 660 Name: __do_global_dtors_aux
+Offset: 2010a8 Name: completed.7594
+Offset: 200e18 Name: __do_global_dtors_aux_fini_array_entry
+Offset: 680 Name: frame_dummy
+Offset: 200e10 Name: __frame_dummy_init_array_entry
+Offset: 9a0 Name: __FRAME_END__
+Offset: 200e20 Name: __JCR_END__
+Offset: 200e18 Name: __init_array_end
+Offset: 200e28 Name: _DYNAMIC
+Offset: 200e10 Name: __init_array_start
+Offset: 82c Name: __GNU_EH_FRAME_HDR
+Offset: 201000 Name: _GLOBAL_OFFSET_TABLE_
+Offset: 7e0 Name: __libc_csu_fini
+Offset: 201050 Name: data_start
+Offset: 2010a0 Name: stdin@@GLIBC_2.2.5
+Offset: 20109c Name: _edata
+Offset: 7e4 Name: _fini
+Offset: 201050 Name: __data_start
+Offset: 201058 Name: __dso_handle
+Offset: 7f0 Name: _IO_stdin_used
+Offset: 201060 Name: msgSecret
+Offset: 770 Name: __libc_csu_init
+Offset: 2010b0 Name: _end
+Offset: 5b0 Name: _start
+Offset: 201080 Name: msgDefault
+Offset: 20109c Name: __bss_start
+Offset: 6e4 Name: main
+Offset: 6c5 Name: print_default
+Offset: 2010a0 Name: __TMC_END__
+Offset: 6a6 Name: print_secr
+Offset: 510 Name: _init
+Module name libfunctrace.so - Full path /home/invictus1306/Documents/article/functrace/build/libfunctrace.so 
+Module name ld-2.23.so - Full path /lib/x86_64-linux-gnu/ld-2.23.so 
+Module name libdynamorio.so - Full path /home/invictus1306/Documents/new_conf/instrumentation/DynamoRIO-Linux-7.0.0-RC1/lib64/release/libdynamorio.so 
+Module name libc-2.23.so - Full path /lib/x86_64-linux-gnu/libc-2.23.so 
+[ADDR] Start address: 0x4005b0 End Address: 0x4005da PC: 0x4005b0 Function: _start
+
+[NOSYM] PC: 0x400570 Function: NoSym
+
+[NOSYM] PC: 0x400576 Function: NoSym
+
+[NOSYM] PC: 0x400530 Function: NoSym
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x400770 Function: __libc_csu_init
+
+[NOSYM] PC: 0x400510 Function: NoSym
+
+[NOSYM] PC: 0x400525 Function: NoSym
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a1 Function: __libc_csu_init
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a6 Function: __libc_csu_init
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x400680 Function: frame_dummy
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x40068b Function: frame_dummy
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400620 Function: register_tm_clones
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400658 Function: register_tm_clones
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007bd Function: __libc_csu_init
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007c6 Function: __libc_csu_init
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x4006e4 Function: main
+
+[NOSYM] PC: 0x400540 Function: NoSym
+
+[NOSYM] PC: 0x400546 Function: NoSym
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40070c Function: main
+
+[NOSYM] PC: 0x400580 Function: NoSym
+
+[NOSYM] PC: 0x400586 Function: NoSym
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400724 Function: main
+
+[NOSYM] PC: 0x400590 Function: NoSym
+
+[NOSYM] PC: 0x400596 Function: NoSym
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400735 Function: main
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400739 Function: main
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006c5 Function: print_default
+
+[NOSYM] PC: 0x400560 Function: NoSym
+
+[NOSYM] PC: 0x400566 Function: NoSym
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006dd Function: print_default
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400743 Function: main
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40074f Function: main
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400768 Function: main
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400660 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400669 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x4005e0 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x400610 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400672 Function: __do_global_dtors_aux
+
+[NOSYM] PC: 0x4007e4 Function: NoSym
+

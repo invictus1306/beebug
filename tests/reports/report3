@@ -1,0 +1,100 @@
+[ADDR] Start address: 0x4005b0 End Address: 0x4005da PC: 0x4005b0 Function: _start
+
+[NOSYM] PC: 0x400570 Function: NoSym
+
+[NOSYM] PC: 0x400576 Function: NoSym
+
+[NOSYM] PC: 0x400530 Function: NoSym
+
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x400780 Function: __libc_csu_init
+
+[NOSYM] PC: 0x400510 Function: NoSym
+
+[NOSYM] PC: 0x400525 Function: NoSym
+
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x4007b1 Function: __libc_csu_init
+
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x4007b6 Function: __libc_csu_init
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x400680 Function: frame_dummy
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x40068b Function: frame_dummy
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400620 Function: register_tm_clones
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400658 Function: register_tm_clones
+
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x4007cd Function: __libc_csu_init
+
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x4007d6 Function: __libc_csu_init
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x4006f9 Function: main
+
+[NOSYM] PC: 0x400540 Function: NoSym
+
+[NOSYM] PC: 0x400546 Function: NoSym
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x400721 Function: main
+
+[NOSYM] PC: 0x400580 Function: NoSym
+
+[NOSYM] PC: 0x400586 Function: NoSym
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x400739 Function: main
+
+[NOSYM] PC: 0x400590 Function: NoSym
+
+[NOSYM] PC: 0x400596 Function: NoSym
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x40074a Function: main
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x40074e Function: main
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006f9 PC: 0x4006c5 Function: print_default
+TAG  0x00000000004006c5
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      48 83 ec 20          sub    rsp, 0x20
+ +8    L3                      89 7d ec             mov    dword ptr [rbp-0x14], edi
+ +11   L3                      8b 45 ec             mov    eax, dword ptr [rbp-0x14]
+ +14   L3                      83 c0 0a             add    eax, 0x0a
+ +17   L3                      89 45 fc             mov    dword ptr [rbp-0x04], eax
+ +20   L3                      8b 45 fc             mov    eax, dword ptr [rbp-0x04]
+ +23   L3                      89 c2                mov    edx, eax
+ +25   L3                      be 80 10 60 00       mov    esi, 0x00601080
+ +30   L3                      bf 12 08 40 00       mov    edi, 0x00400812
+ +35   L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +40   L3                      e8 6e fe ff ff       call   0x0000000000400560
+END 0x00000000004006c5
+
+
+[NOSYM] PC: 0x400560 Function: NoSym
+
+[NOSYM] PC: 0x400566 Function: NoSym
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006f9 PC: 0x4006f2 Function: print_default
+TAG  0x00000000004006f2
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      c9                   leave
+ +6    L3                      c3                   ret
+END 0x00000000004006f2
+
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x400758 Function: main
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x400764 Function: main
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x40077d Function: main
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400660 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400669 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x4005e0 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x400610 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400672 Function: __do_global_dtors_aux
+
+[NOSYM] PC: 0x4007f4 Function: NoSym
+

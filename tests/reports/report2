@@ -1,0 +1,340 @@
+[ADDR] Start address: 0x4005b0 End Address: 0x4005da PC: 0x4005b0 Function: _start
+TAG  0x00000000004005b0
+ +0    L3                      31 ed                xor    ebp, ebp
+ +2    L3                      49 89 d1             mov    r9, rdx
+ +5    L3                      5e                   pop    rsi
+ +6    L3                      48 89 e2             mov    rdx, rsp
+ +9    L3                      48 83 e4 f0          and    rsp, 0xf0
+ +13   L3                      50                   push   rax
+ +14   L3                      54                   push   rsp
+ +15   L3                      49 c7 c0 e0 07 40 00 mov    r8, 0x004007e0
+ +22   L3                      48 c7 c1 70 07 40 00 mov    rcx, 0x00400770
+ +29   L3                      48 c7 c7 e4 06 40 00 mov    rdi, 0x004006e4
+ +36   L3                      e8 97 ff ff ff       call   0x0000000000400570
+END 0x00000000004005b0
+
+
+[NOSYM] PC: 0x400570 Function: NoSym
+TAG  0x0000000000400570
+ +0    L3                      ff 25 ba 0a 20 00    jmp    <rel> qword ptr [0x0000000000601030]
+END 0x0000000000400570
+
+
+[NOSYM] PC: 0x400576 Function: NoSym
+TAG  0x0000000000400576
+ +0    L3                      68 03 00 00 00       push   0x00000003
+ +5    L3                      e9 b0 ff ff ff       jmp    0x0000000000400530
+END 0x0000000000400576
+
+
+[NOSYM] PC: 0x400530 Function: NoSym
+TAG  0x0000000000400530
+ +0    L3                      ff 35 d2 0a 20 00    push   <rel> qword ptr [0x0000000000601008]
+ +6    L3                      ff 25 d4 0a 20 00    jmp    <rel> qword ptr [0x0000000000601010]
+END 0x0000000000400530
+
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x400770 Function: __libc_csu_init
+TAG  0x0000000000400770
+ +0    L3                      41 57                push   r15
+ +2    L3                      41 56                push   r14
+ +4    L3                      41 89 ff             mov    r15d, edi
+ +7    L3                      41 55                push   r13
+ +9    L3                      41 54                push   r12
+ +11   L3                      4c 8d 25 8e 06 20 00 lea    r12, <rel> [0x0000000000600e10]
+ +18   L3                      55                   push   rbp
+ +19   L3                      48 8d 2d 8e 06 20 00 lea    rbp, <rel> [0x0000000000600e18]
+ +26   L3                      53                   push   rbx
+ +27   L3                      49 89 f6             mov    r14, rsi
+ +30   L3                      49 89 d5             mov    r13, rdx
+ +33   L3                      4c 29 e5             sub    rbp, r12
+ +36   L3                      48 83 ec 08          sub    rsp, 0x08
+ +40   L3                      48 c1 fd 03          sar    rbp, 0x03
+ +44   L3                      e8 6f fd ff ff       call   0x0000000000400510
+END 0x0000000000400770
+
+
+[NOSYM] PC: 0x400510 Function: NoSym
+TAG  0x0000000000400510
+ +0    L3                      48 83 ec 08          sub    rsp, 0x08
+ +4    L3                      48 8b 05 dd 0a 20 00 mov    rax, <rel> qword ptr [0x0000000000600ff8]
+ +11   L3                      48 85 c0             test   rax, rax
+ +14   L3                      74 05                jz     0x0000000000400525
+END 0x0000000000400510
+
+
+[NOSYM] PC: 0x400525 Function: NoSym
+TAG  0x0000000000400525
+ +0    L3                      48 83 c4 08          add    rsp, 0x08
+ +4    L3                      c3                   ret
+END 0x0000000000400525
+
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a1 Function: __libc_csu_init
+TAG  0x00000000004007a1
+ +0    L3                      48 85 ed             test   rbp, rbp
+ +3    L3                      74 20                jz     0x00000000004007c6
+END 0x00000000004007a1
+
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a6 Function: __libc_csu_init
+TAG  0x00000000004007a6
+ +0    L3                      31 db                xor    ebx, ebx
+ +2    L3                      0f 1f 84 00 00 00 00 nop    dword ptr [rax+rax+0x00000000]
+                               00
+ +10   L3                      4c 89 ea             mov    rdx, r13
+ +13   L3                      4c 89 f6             mov    rsi, r14
+ +16   L3                      44 89 ff             mov    edi, r15d
+ +19   L3                      41 ff 14 dc          call   qword ptr [r12+rbx*8]
+END 0x00000000004007a6
+
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x400680 Function: frame_dummy
+TAG  0x0000000000400680
+ +0    L3                      bf 20 0e 60 00       mov    edi, 0x00600e20
+ +5    L3                      48 83 3f 00          cmp    qword ptr [rdi], 0x00
+ +9    L3                      75 05                jnz    0x0000000000400690
+END 0x0000000000400680
+
+
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x40068b Function: frame_dummy
+TAG  0x000000000040068b
+ +0    L3                      eb 93                jmp    0x0000000000400620
+END 0x000000000040068b
+
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400620 Function: register_tm_clones
+TAG  0x0000000000400620
+ +0    L3                      be a0 10 60 00       mov    esi, 0x006010a0
+ +5    L3                      55                   push   rbp
+ +6    L3                      48 81 ee a0 10 60 00 sub    rsi, 0x006010a0
+ +13   L3                      48 c1 fe 03          sar    rsi, 0x03
+ +17   L3                      48 89 e5             mov    rbp, rsp
+ +20   L3                      48 89 f0             mov    rax, rsi
+ +23   L3                      48 c1 e8 3f          shr    rax, 0x3f
+ +27   L3                      48 01 c6             add    rsi, rax
+ +30   L3                      48 d1 fe             sar    rsi, 0x01
+ +33   L3                      74 15                jz     0x0000000000400658
+END 0x0000000000400620
+
+
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400658 Function: register_tm_clones
+TAG  0x0000000000400658
+ +0    L3                      5d                   pop    rbp
+ +1    L3                      c3                   ret
+END 0x0000000000400658
+
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007bd Function: __libc_csu_init
+TAG  0x00000000004007bd
+ +0    L3                      48 83 c3 01          add    rbx, 0x01
+ +4    L3                      48 39 eb             cmp    rbx, rbp
+ +7    L3                      75 ea                jnz    0x00000000004007b0
+END 0x00000000004007bd
+
+
+[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007c6 Function: __libc_csu_init
+TAG  0x00000000004007c6
+ +0    L3                      48 83 c4 08          add    rsp, 0x08
+ +4    L3                      5b                   pop    rbx
+ +5    L3                      5d                   pop    rbp
+ +6    L3                      41 5c                pop    r12
+ +8    L3                      41 5d                pop    r13
+ +10   L3                      41 5e                pop    r14
+ +12   L3                      41 5f                pop    r15
+ +14   L3                      c3                   ret
+END 0x00000000004007c6
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x4006e4 Function: main
+TAG  0x00000000004006e4
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      48 83 ec 20          sub    rsp, 0x20
+ +8    L3                      89 7d ec             mov    dword ptr [rbp-0x14], edi
+ +11   L3                      48 89 75 e0          mov    qword ptr [rbp-0x20], rsi
+ +15   L3                      64 48 8b 04 25 28 00 mov    rax, qword ptr [fs:0x28]
+                               00 00
+ +24   L3                      48 89 45 f8          mov    qword ptr [rbp-0x08], rax
+ +28   L3                      31 c0                xor    eax, eax
+ +30   L3                      bf 0d 08 40 00       mov    edi, 0x0040080d
+ +35   L3                      e8 34 fe ff ff       call   0x0000000000400540
+END 0x00000000004006e4
+
+
+[NOSYM] PC: 0x400540 Function: NoSym
+TAG  0x0000000000400540
+ +0    L3                      ff 25 d2 0a 20 00    jmp    <rel> qword ptr [0x0000000000601018]
+END 0x0000000000400540
+
+
+[NOSYM] PC: 0x400546 Function: NoSym
+TAG  0x0000000000400546
+ +0    L3                      68 00 00 00 00       push   0x00000000
+ +5    L3                      e9 e0 ff ff ff       jmp    0x0000000000400530
+END 0x0000000000400546
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40070c Function: main
+TAG  0x000000000040070c
+ +0    L3                      48 8b 15 8d 09 20 00 mov    rdx, <rel> qword ptr [0x00000000006010a0]
+ +7    L3                      48 8d 45 f0          lea    rax, [rbp-0x10]
+ +11   L3                      be 05 00 00 00       mov    esi, 0x00000005
+ +16   L3                      48 89 c7             mov    rdi, rax
+ +19   L3                      e8 5c fe ff ff       call   0x0000000000400580
+END 0x000000000040070c
+
+
+[NOSYM] PC: 0x400580 Function: NoSym
+TAG  0x0000000000400580
+ +0    L3                      ff 25 b2 0a 20 00    jmp    <rel> qword ptr [0x0000000000601038]
+END 0x0000000000400580
+
+
+[NOSYM] PC: 0x400586 Function: NoSym
+TAG  0x0000000000400586
+ +0    L3                      68 04 00 00 00       push   0x00000004
+ +5    L3                      e9 a0 ff ff ff       jmp    0x0000000000400530
+END 0x0000000000400586
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400724 Function: main
+TAG  0x0000000000400724
+ +0    L3                      48 8d 45 f0          lea    rax, [rbp-0x10]
+ +4    L3                      be 26 08 40 00       mov    esi, 0x00400826
+ +9    L3                      48 89 c7             mov    rdi, rax
+ +12   L3                      e8 5b fe ff ff       call   0x0000000000400590
+END 0x0000000000400724
+
+
+[NOSYM] PC: 0x400590 Function: NoSym
+TAG  0x0000000000400590
+ +0    L3                      ff 25 aa 0a 20 00    jmp    <rel> qword ptr [0x0000000000601040]
+END 0x0000000000400590
+
+
+[NOSYM] PC: 0x400596 Function: NoSym
+TAG  0x0000000000400596
+ +0    L3                      68 05 00 00 00       push   0x00000005
+ +5    L3                      e9 90 ff ff ff       jmp    0x0000000000400530
+END 0x0000000000400596
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400735 Function: main
+TAG  0x0000000000400735
+ +0    L3                      85 c0                test   eax, eax
+ +2    L3                      74 0c                jz     0x0000000000400745
+END 0x0000000000400735
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400739 Function: main
+TAG  0x0000000000400739
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      e8 82 ff ff ff       call   0x00000000004006c5
+END 0x0000000000400739
+
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006c5 Function: print_default
+TAG  0x00000000004006c5
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      be 80 10 60 00       mov    esi, 0x00601080
+ +9    L3                      bf 02 08 40 00       mov    edi, 0x00400802
+ +14   L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +19   L3                      e8 83 fe ff ff       call   0x0000000000400560
+END 0x00000000004006c5
+
+
+[NOSYM] PC: 0x400560 Function: NoSym
+TAG  0x0000000000400560
+ +0    L3                      ff 25 c2 0a 20 00    jmp    <rel> qword ptr [0x0000000000601028]
+END 0x0000000000400560
+
+
+[NOSYM] PC: 0x400566 Function: NoSym
+TAG  0x0000000000400566
+ +0    L3                      68 02 00 00 00       push   0x00000002
+ +5    L3                      e9 c0 ff ff ff       jmp    0x0000000000400530
+END 0x0000000000400566
+
+
+[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006dd Function: print_default
+TAG  0x00000000004006dd
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      5d                   pop    rbp
+ +6    L3                      c3                   ret
+END 0x00000000004006dd
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400743 Function: main
+TAG  0x0000000000400743
+ +0    L3                      eb 0a                jmp    0x000000000040074f
+END 0x0000000000400743
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40074f Function: main
+TAG  0x000000000040074f
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      48 8b 4d f8          mov    rcx, qword ptr [rbp-0x08]
+ +9    L3                      64 48 33 0c 25 28 00 xor    rcx, qword ptr [fs:0x28]
+                               00 00
+ +18   L3                      74 05                jz     0x0000000000400768
+END 0x000000000040074f
+
+
+[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400768 Function: main
+TAG  0x0000000000400768
+ +0    L3                      c9                   leave
+ +1    L3                      c3                   ret
+END 0x0000000000400768
+
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400660 Function: __do_global_dtors_aux
+TAG  0x0000000000400660
+ +0    L3                      80 3d 41 0a 20 00 00 cmp    <rel> byte ptr [0x00000000006010a8], 0x00
+ +7    L3                      75 11                jnz    0x000000000040067a
+END 0x0000000000400660
+
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400669 Function: __do_global_dtors_aux
+TAG  0x0000000000400669
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      e8 6e ff ff ff       call   0x00000000004005e0
+END 0x0000000000400669
+
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x4005e0 Function: deregister_tm_clones
+TAG  0x00000000004005e0
+ +0    L3                      b8 a7 10 60 00       mov    eax, 0x006010a7
+ +5    L3                      55                   push   rbp
+ +6    L3                      48 2d a0 10 60 00    sub    rax, 0x006010a0
+ +12   L3                      48 83 f8 0e          cmp    rax, 0x0e
+ +16   L3                      48 89 e5             mov    rbp, rsp
+ +19   L3                      76 1b                jbe    0x0000000000400610
+END 0x00000000004005e0
+
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x400610 Function: deregister_tm_clones
+TAG  0x0000000000400610
+ +0    L3                      5d                   pop    rbp
+ +1    L3                      c3                   ret
+END 0x0000000000400610
+
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400672 Function: __do_global_dtors_aux
+TAG  0x0000000000400672
+ +0    L3                      5d                   pop    rbp
+ +1    L3                      c6 05 2e 0a 20 00 01 mov    <rel> byte ptr [0x00000000006010a8], 0x01
+ +8    L3                      f3 c3                ret
+END 0x0000000000400672
+
+
+[NOSYM] PC: 0x4007e4 Function: NoSym
+TAG  0x00000000004007e4
+ +0    L3                      48 83 ec 08          sub    rsp, 0x08
+ +4    L3                      48 83 c4 08          add    rsp, 0x08
+ +8    L3                      c3                   ret
+END 0x00000000004007e4
+
+

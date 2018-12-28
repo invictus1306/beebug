@@ -10,7 +10,7 @@
 ## Description
 **beebug** is a tool that can be used to verify if a program crash could be exploitable.
 
-This tool was presented at [r2con](https://rada.re/con/2018/) 2018 in Barcelona.
+This tool was presented the first time at [r2con](https://rada.re/con/2018/) 2018 in Barcelona.
 
 Some implemented functionality are:
 * Stack overflow on libc 
@@ -30,7 +30,7 @@ Some implemented functionality are:
 * pyqtgraph
 
 ## Installation
-```
+```shell
 ~ $ wget https://github.com/radare/radare2/archive/2.7.0.tar.gz
 ~ $ tar xzvf 2.7.0.tar.gz
 ~ $ cd radare2-2.7.0/
@@ -45,9 +45,10 @@ Some implemented functionality are:
 
 ### help
 
-```
-# python3 ./beebug.py -h
-usage: beebug.py [-h] -t TARGET [-a TARGETARGS] [-f FILE] [-g GRAPH]
+```shell
+$ python3 ./beebug.py -h
+usage: beebug.py [-h] [-t TARGET] [-a TARGETARGS] [-f FILE] [-g GRAPH] [-i]
+                 [-r REPORT_FILE] [-v]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -58,11 +59,15 @@ optional arguments:
   -f FILE, --file FILE  input file
   -g GRAPH, --graph GRAPH
                         generate the graph
+  -i, --instrumentation
+                        instrumentation option
+  -r REPORT_FILE, --report_file REPORT_FILE
+                        DynamoRIO report file to parse
 ```
 
 ### Simple usage
 
-```
+```shell
 # python3 ./beebug.py -t tests/crash_on_pc
 Process with PID 7691 started...
 File dbg:///home/invictus1306/Documents/r2conf/beebug/beebug/tests/crash_on_pc  reopened in read-write mode
@@ -100,14 +105,36 @@ orax = 0xffffffffffffffff
 
 ### Graph generation
 
-```
+```shell
 # python3 ./beebug.py -t tests/crash_on_pc -g crash_on_pc
 ...
-# display crash_on_pc.png
+$ display crash_on_pc.png
 ```
 ![crash_on_pc](https://github.com/invictus1306/beebug/blob/master/crash_on_pc.png)
 
+### Report parsing
+
+Parse the report produced by [functrace](https://github.com/invictus1306/functrace), and graph generation.
+
+##### Generate report using *libtrace*
+
+```shell
+$ drrun -c libfunctrace.so -report_file report1 -verbose -- ../tests/simple_test
+Please enter a message: 
+AAAA
+Hello! This is the default message
+```
+
+##### Run *beebug* for graph generation
+
+```shell
+$ python3 beebug.py -i -r ./tests/reports/report1 -g report1
+```
+
+![beebugreport](https://github.com/invictus1306/beebug/blob/master/report1.png)
+
 ## Future direction
+
 * Support different architectures
 * Improvement of the graph view (based on radare2)
 * Analyze core dumps (based on radare2)
