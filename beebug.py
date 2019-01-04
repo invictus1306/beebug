@@ -12,16 +12,6 @@ def check_file(file):
     if not os.path.exists(file):
         sys.exit()
 
-'''
-disassembly
-disassembly function
-bb graph
-function graph
-
-parse = Parse("/home/invictus1306/Documents/article/beebug/report", False, "test", True)
-parse.read_file()
-'''
-
 def main():
 
     graph = False
