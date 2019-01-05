@@ -119,23 +119,19 @@ Parse the report produced by [functrace](https://github.com/invictus1306/functra
 ##### Generate report using *libtrace*
 
 ```shell
-$ drrun -c libfunctrace.so -report_file report1 -verbose -- ../tests/simple_test
+$ drrun -c libfunctrace.so -report_file ./tests/reports/report1 -disas_func main -- ./tests/reports/simple_test
 Please enter a message: 
 AAAA
-Hello! This is the default message
+Hello! This is the default message, the number is 22
 ```
 
 ##### Run *beebug* for graph generation
 
 ```shell
-$ drrun -c libfunctrace.so -report_file ./tests/reports/report1 -disas_func main -- ./tests/reports/simple_test
-Please enter a message: 
-AAAA
-Hello! This is the default message, the number is 22
 $ python3 beebug.py -i -r ./tests/reports/report1 -g tests/reports/report1
 ```
 
-![beebugreport]https://github.com/invictus1306/beebug/blob/master/tests/reports/report1.pdf)
+[beebugreport]https://github.com/invictus1306/beebug/blob/master/tests/reports/report1.pdf)
 
 ## Future direction
 
