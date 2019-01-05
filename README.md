@@ -131,7 +131,7 @@ Hello! This is the default message, the number is 22
 $ python3 beebug.py -i -r ./tests/reports/report1 -g tests/reports/report1
 ```
 
-[beebugreport]https://github.com/invictus1306/beebug/blob/master/tests/reports/report1.pdf)
+[beebugreport](https://github.com/invictus1306/beebug/blob/master/tests/reports/report1.pdf)
 
 ## Future direction
 
