@@ -1,117 +1,134 @@
-Module name simple_test - Full path /home/invictus1306/Documents/article/functrace/tests/simple_test 
-Offset: 200e20 Name: __JCR_LIST__
-Offset: 5e0 Name: deregister_tm_clones
-Offset: 620 Name: register_tm_clones
-Offset: 660 Name: __do_global_dtors_aux
-Offset: 2010a8 Name: completed.7594
-Offset: 200e18 Name: __do_global_dtors_aux_fini_array_entry
-Offset: 680 Name: frame_dummy
-Offset: 200e10 Name: __frame_dummy_init_array_entry
-Offset: 9a0 Name: __FRAME_END__
-Offset: 200e20 Name: __JCR_END__
-Offset: 200e18 Name: __init_array_end
-Offset: 200e28 Name: _DYNAMIC
-Offset: 200e10 Name: __init_array_start
-Offset: 82c Name: __GNU_EH_FRAME_HDR
-Offset: 201000 Name: _GLOBAL_OFFSET_TABLE_
-Offset: 7e0 Name: __libc_csu_fini
-Offset: 201050 Name: data_start
-Offset: 2010a0 Name: stdin@@GLIBC_2.2.5
-Offset: 20109c Name: _edata
-Offset: 7e4 Name: _fini
-Offset: 201050 Name: __data_start
-Offset: 201058 Name: __dso_handle
-Offset: 7f0 Name: _IO_stdin_used
-Offset: 201060 Name: msgSecret
-Offset: 770 Name: __libc_csu_init
-Offset: 2010b0 Name: _end
-Offset: 5b0 Name: _start
-Offset: 201080 Name: msgDefault
-Offset: 20109c Name: __bss_start
-Offset: 6e4 Name: main
-Offset: 6c5 Name: print_default
-Offset: 2010a0 Name: __TMC_END__
-Offset: 6a6 Name: print_secr
-Offset: 510 Name: _init
-Module name libfunctrace.so - Full path /home/invictus1306/Documents/article/functrace/build/libfunctrace.so 
-Module name ld-2.23.so - Full path /lib/x86_64-linux-gnu/ld-2.23.so 
-Module name libdynamorio.so - Full path /home/invictus1306/Documents/new_conf/instrumentation/DynamoRIO-Linux-7.0.0-RC1/lib64/release/libdynamorio.so 
-Module name libc-2.23.so - Full path /lib/x86_64-linux-gnu/libc-2.23.so 
-[ADDR] Start address: 0x4005b0 End Address: 0x4005da PC: 0x4005b0 Function: _start
+[ADDR] Start address: 0x4005b0 End Address: 0x4005da PC: 0x00000000004005b0 Function: _start
 
-[NOSYM] PC: 0x400570 Function: NoSym
+[NOSYM] PC: 0x0000000000400570 BB Start address: 0x0000000000400570 BB End Address: 0x0000000000400570 
 
-[NOSYM] PC: 0x400576 Function: NoSym
+[NOSYM] PC: 0x0000000000400576 BB Start address: 0x0000000000400576 BB End Address: 0x000000000040057b 
 
-[NOSYM] PC: 0x400530 Function: NoSym
+[NOSYM] PC: 0x0000000000400530 BB Start address: 0x0000000000400530 BB End Address: 0x0000000000400536 
 
-[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x400770 Function: __libc_csu_init
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x0000000000400780 Function: __libc_csu_init
 
-[NOSYM] PC: 0x400510 Function: NoSym
+[NOSYM] PC: 0x0000000000400510 BB Start address: 0x0000000000400510 BB End Address: 0x000000000040051e 
 
-[NOSYM] PC: 0x400525 Function: NoSym
+[NOSYM] PC: 0x0000000000400525 BB Start address: 0x0000000000400525 BB End Address: 0x0000000000400529 
 
-[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a1 Function: __libc_csu_init
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x00000000004007b1 Function: __libc_csu_init
 
-[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007a6 Function: __libc_csu_init
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x00000000004007b6 Function: __libc_csu_init
 
-[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x400680 Function: frame_dummy
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x0000000000400680 Function: frame_dummy
 
-[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x40068b Function: frame_dummy
+[ADDR] Start address: 0x400680 End Address: 0x400680 PC: 0x000000000040068b Function: frame_dummy
 
-[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400620 Function: register_tm_clones
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x0000000000400620 Function: register_tm_clones
 
-[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x400658 Function: register_tm_clones
+[ADDR] Start address: 0x400620 End Address: 0x400620 PC: 0x0000000000400658 Function: register_tm_clones
 
-[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007bd Function: __libc_csu_init
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x00000000004007cd Function: __libc_csu_init
 
-[ADDR] Start address: 0x400770 End Address: 0x4007d5 PC: 0x4007c6 Function: __libc_csu_init
+[ADDR] Start address: 0x400780 End Address: 0x4007e5 PC: 0x00000000004007d6 Function: __libc_csu_init
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x4006e4 Function: main
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x00000000004006f9 Function: main
+TAG  0x00000000004006f9
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      48 83 ec 20          sub    rsp, 0x20
+ +8    L3                      89 7d ec             mov    dword ptr [rbp-0x14], edi
+ +11   L3                      48 89 75 e0          mov    qword ptr [rbp-0x20], rsi
+ +15   L3                      64 48 8b 04 25 28 00 mov    rax, qword ptr [fs:0x28]
+                               00 00
+ +24   L3                      48 89 45 f8          mov    qword ptr [rbp-0x08], rax
+ +28   L3                      31 c0                xor    eax, eax
+ +30   L3                      bf 2f 08 40 00       mov    edi, 0x0040082f
+ +35   L3                      e8 1f fe ff ff       call   0x0000000000400540
+END 0x00000000004006f9
 
-[NOSYM] PC: 0x400540 Function: NoSym
 
-[NOSYM] PC: 0x400546 Function: NoSym
+[NOSYM] PC: 0x0000000000400540 BB Start address: 0x0000000000400540 BB End Address: 0x0000000000400540 
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40070c Function: main
+[NOSYM] PC: 0x0000000000400546 BB Start address: 0x0000000000400546 BB End Address: 0x000000000040054b 
 
-[NOSYM] PC: 0x400580 Function: NoSym
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x0000000000400721 Function: main
+TAG  0x0000000000400721
+ +0    L3                      48 8b 15 78 09 20 00 mov    rdx, <rel> qword ptr [0x00000000006010a0]
+ +7    L3                      48 8d 45 f0          lea    rax, [rbp-0x10]
+ +11   L3                      be 05 00 00 00       mov    esi, 0x00000005
+ +16   L3                      48 89 c7             mov    rdi, rax
+ +19   L3                      e8 47 fe ff ff       call   0x0000000000400580
+END 0x0000000000400721
 
-[NOSYM] PC: 0x400586 Function: NoSym
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400724 Function: main
+[NOSYM] PC: 0x0000000000400580 BB Start address: 0x0000000000400580 BB End Address: 0x0000000000400580 
 
-[NOSYM] PC: 0x400590 Function: NoSym
+[NOSYM] PC: 0x0000000000400586 BB Start address: 0x0000000000400586 BB End Address: 0x000000000040058b 
 
-[NOSYM] PC: 0x400596 Function: NoSym
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x0000000000400739 Function: main
+TAG  0x0000000000400739
+ +0    L3                      48 8d 45 f0          lea    rax, [rbp-0x10]
+ +4    L3                      be 48 08 40 00       mov    esi, 0x00400848
+ +9    L3                      48 89 c7             mov    rdi, rax
+ +12   L3                      e8 46 fe ff ff       call   0x0000000000400590
+END 0x0000000000400739
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400735 Function: main
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400739 Function: main
+[NOSYM] PC: 0x0000000000400590 BB Start address: 0x0000000000400590 BB End Address: 0x0000000000400590 
 
-[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006c5 Function: print_default
+[NOSYM] PC: 0x0000000000400596 BB Start address: 0x0000000000400596 BB End Address: 0x000000000040059b 
 
-[NOSYM] PC: 0x400560 Function: NoSym
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x000000000040074a Function: main
+TAG  0x000000000040074a
+ +0    L3                      85 c0                test   eax, eax
+ +2    L3                      74 0c                jz     0x000000000040075a
+END 0x000000000040074a
 
-[NOSYM] PC: 0x400566 Function: NoSym
 
-[ADDR] Start address: 0x4006c5 End Address: 0x4006e4 PC: 0x4006dd Function: print_default
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x000000000040074e Function: main
+TAG  0x000000000040074e
+ +0    L3                      bf 0c 00 00 00       mov    edi, 0x0000000c
+ +5    L3                      e8 6d ff ff ff       call   0x00000000004006c5
+END 0x000000000040074e
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400743 Function: main
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x40074f Function: main
+[ADDR] Start address: 0x4006c5 End Address: 0x4006f9 PC: 0x00000000004006c5 Function: print_default
 
-[ADDR] Start address: 0x4006e4 End Address: 0x40076a PC: 0x400768 Function: main
+[NOSYM] PC: 0x0000000000400560 BB Start address: 0x0000000000400560 BB End Address: 0x0000000000400560 
 
-[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400660 Function: __do_global_dtors_aux
+[NOSYM] PC: 0x0000000000400566 BB Start address: 0x0000000000400566 BB End Address: 0x000000000040056b 
 
-[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400669 Function: __do_global_dtors_aux
+[ADDR] Start address: 0x4006c5 End Address: 0x4006f9 PC: 0x00000000004006f2 Function: print_default
 
-[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x4005e0 Function: deregister_tm_clones
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x0000000000400758 Function: main
+TAG  0x0000000000400758
+ +0    L3                      eb 0a                jmp    0x0000000000400764
+END 0x0000000000400758
 
-[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x400610 Function: deregister_tm_clones
 
-[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x400672 Function: __do_global_dtors_aux
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x0000000000400764 Function: main
+TAG  0x0000000000400764
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      48 8b 4d f8          mov    rcx, qword ptr [rbp-0x08]
+ +9    L3                      64 48 33 0c 25 28 00 xor    rcx, qword ptr [fs:0x28]
+                               00 00
+ +18   L3                      74 05                jz     0x000000000040077d
+END 0x0000000000400764
 
-[NOSYM] PC: 0x4007e4 Function: NoSym
+
+[ADDR] Start address: 0x4006f9 End Address: 0x40077f PC: 0x000000000040077d Function: main
+TAG  0x000000000040077d
+ +0    L3                      c9                   leave
+ +1    L3                      c3                   ret
+END 0x000000000040077d
+
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x0000000000400660 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x0000000000400669 Function: __do_global_dtors_aux
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x00000000004005e0 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x4005e0 End Address: 0x4005e0 PC: 0x0000000000400610 Function: deregister_tm_clones
+
+[ADDR] Start address: 0x400660 End Address: 0x400660 PC: 0x0000000000400672 Function: __do_global_dtors_aux
+
+[NOSYM] PC: 0x00000000004007f4 BB Start address: 0x00000000004007f4 BB End Address: 0x00000000004007fc 
 

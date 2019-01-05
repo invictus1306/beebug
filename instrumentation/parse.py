@@ -14,7 +14,7 @@ class Parse:
         self.last_node = ""
         self.start_address = ""
         self.end_address = ""
-        self.PC = ""
+        self.pc = ""
         self.name_function = None
         self.args_label = ""
         self.ret = None
@@ -23,19 +23,19 @@ class Parse:
     def read_file(self):
         with open(self.input_file) as fp:
             line = fp.readline()
-            while line: # for line in fp
+            while line:
                 self.parse(line, fp)
                 line = fp.readline()
 
-        # create png
-        self.graph_obj.create_png(self.filename)
+        # create pdf
+        self.graph_obj.create_pdf(self.filename)
 
     def parse(self, line, fp):
         if "[ADDR]" in line:
             line = line.split()
             self.parse_addr(line, fp)
         elif "[NOSYM]" in line:
-            self.parse_nosym(line)
+            self.parse_nosym(line, fp)
         elif "[ARG]" in line:
             self.parse_args(line, fp)
             self.generate_ret_args()
@@ -48,12 +48,13 @@ class Parse:
     def parse_addr(self, line, fp):
         self.start_address = line[3]
         self.end_address = line[6]
-        self.PC = line[8]
+        self.pc = line[8]
         self.name_function = line[10]
         new_line = fp.readline()
         if "TAG" in new_line:
             self.parse_disass(new_line, fp)
-        self.generate_graph()
+        if self.count < 600:
+            self.generate_graph(True)
 
     def parse_disass(self, line, fp):
         self.disass = []
@@ -66,9 +67,15 @@ class Parse:
 
         fp.readline()
 
-    def parse_nosym(self, line):
-        self.pc = line[3]
-        self.name_function = None
+    def parse_nosym(self, line, fp):
+        self.pc = line.split()[2]
+        self.name_function = self.pc
+        self.start_address = line.split()[6]
+        self.end_address = line.split()[10]
+        new_line = fp.readline()
+        if "TAG" in new_line:
+            self.parse_disass(new_line, fp)
+        self.generate_graph(False)
 
     def parse_args(self, line, fp):
         self.wrap_function = line.split()[2]
@@ -99,24 +106,25 @@ class Parse:
             self.graph_obj.create_node(node_id, color, self.args_label)
             self.args_label = ""
 
-    def generate_graph(self):
+    def generate_graph(self, no_sym):
         color = "Green"
-        if self.name_function:
-            node_name = self.name_function
+        label = ""
+        node_name = self.pc
+
+        if no_sym:
+            label += self.name_function
         else:
-            node_name = "NoSym"
+            label = "BB"
 
-        label = self.name_function + " [ " + self.start_address + " - " + self.end_address + " ] "
-
-        label += "\n PC: " + self.PC + "\n"
+        label += " [ " + self.start_address + " - " + self.end_address + " ] "
+        label += "\n PC: " + self.pc + "\n"
 
         if self.disass:
             label += "".join(self.disass)
             self.disass = []
-            node_name = "disas"
             color = "yellow"
 
-        node_id = node_name + str(self.count)
+        node_id = node_name
 
         if self.count == 0: # first node
             self.node = self.graph_obj.create_node(node_id, color, label)

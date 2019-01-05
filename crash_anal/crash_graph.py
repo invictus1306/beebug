@@ -118,8 +118,8 @@ class CrashGraph:
             # create edge
             self.create_edge(caller_address, self.count)
 
-        # create png
-        self.graph_obj.create_png(self.file_name)
+        # create pdf
+        self.graph_obj.create_pdf(self.file_name)
 
     def create_node(self, color):
         function_address = self.pdj[0]["fcn_addr"]

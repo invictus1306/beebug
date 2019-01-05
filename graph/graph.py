@@ -19,5 +19,5 @@ class Graph:
     def create_edge(self, node_in, node_out, message):
         self.graph.add_edge(pydot.Edge(node_in, node_out, label=message, labelfontcolor="#009933", fontsize="12.0", color="blue"))
 
-    def create_png(self, name):
-        self.graph.write_png(name + '.png')
+    def create_pdf(self, name):
+        self.graph.write_pdf(name + '.pdf')

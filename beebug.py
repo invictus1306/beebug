@@ -28,7 +28,7 @@ def main():
     parser.add_argument('-g', '--graph', dest='graph', help='generate the graph')
     parser.add_argument('-i', '--instrumentation', dest='instrumentation',action="store_true", help='instrumentation option')
     parser.add_argument('-r', '--report_file', dest='report_file', help='DynamoRIO report file to parse')
-    parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.0 - 01/01/2019')
+    parser.add_argument('-v', '--version', action='version', version='%(prog)s 1.1 - 05/01/2019')
 
     options = parser.parse_args()
 
