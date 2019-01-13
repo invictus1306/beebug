@@ -1,5 +1,5 @@
 from graph.graph import Graph
-
+import sys
 
 class Parse:
 
@@ -30,12 +30,23 @@ class Parse:
         # create pdf
         self.graph_obj.create_pdf(self.filename)
 
+    def parse_line(self, line, func):
+        line = line.split(";")
+        self.start_address = line[1]
+        self.end_address = line[2]
+        self.pc = line[3]
+        if func:
+            self.name_function = line[4]
+        else:
+            self.name_function = self.pc
+
     def parse(self, line, fp):
-        if "[ADDR]" in line:
-            line = line.split()
-            self.parse_addr(line, fp)
-        elif "[NOSYM]" in line:
-            self.parse_nosym(line, fp)
+        if "[FUNC]" in line:
+            self.parse_line(line, True)
+            self.parse_addr(fp)
+        elif "[NOFUNC]" in line:
+            self.parse_line(line, False)
+            self.parse_nosym(fp)
         elif "[ARG]" in line:
             self.parse_args(line, fp)
             self.generate_ret_args()
@@ -45,16 +56,15 @@ class Parse:
         else:
             return
 
-    def parse_addr(self, line, fp):
-        self.start_address = line[3]
-        self.end_address = line[6]
-        self.pc = line[8]
-        self.name_function = line[10]
+    def parse_addr(self, fp):
         new_line = fp.readline()
         if "TAG" in new_line:
             self.parse_disass(new_line, fp)
         if self.count < 600:
             self.generate_graph(True)
+        else:
+            print("TIt is not possible to generate the graph! (In pydot.py the call subprocess.Popen never end)")
+            sys.exit()
 
     def parse_disass(self, line, fp):
         self.disass = []
@@ -67,27 +77,31 @@ class Parse:
 
         fp.readline()
 
-    def parse_nosym(self, line, fp):
-        self.pc = line.split()[2]
-        self.name_function = self.pc
-        self.start_address = line.split()[6]
-        self.end_address = line.split()[10]
+    def parse_nosym(self, fp):
         new_line = fp.readline()
         if "TAG" in new_line:
             self.parse_disass(new_line, fp)
-        self.generate_graph(False)
+        if self.count < 600:
+            self.generate_graph(False)
+        else:
+            print("It is not possible to generate the graph! (In pydot.py the call subprocess.Popen never end)")
+            sys.exit()
 
     def parse_args(self, line, fp):
-        self.wrap_function = line.split()[2]
-        arg = "Arg: " + line.split()[5] + "\n"
+        line = line.split(";")
+        self.wrap_function = line[1]
+        arg = "Arg: " + line[3] + "\n"
         self.args.append(arg)
         line = fp.readline()
+        line = line.split(";")
         while "ARG" in line:
-            arg = "Arg: " + line.split()[5] + "\n"
+            arg = "Arg: " + line[3] + "\n"
             self.args.append(arg)
 
     def parse_ret(self, line):
-        self.ret = "Return value: " + line.split()[4]
+        line = line.split(";")
+        self.wrap_function = line[1]
+        self.ret = "Return value: " + line[2]
 
     def generate_ret_args(self):
         node_name = self.wrap_function
@@ -100,7 +114,7 @@ class Parse:
                 self.args_label += "".join(self.args)
                 self.args =[]
         if self.ret:
-            self.args_label += "\n" + self.ret
+            self.args_label += "\nFunction: " + self.wrap_function + self.ret
             self.ret = None
             node_id = node_name
             self.graph_obj.create_node(node_id, color, self.args_label)
