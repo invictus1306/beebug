@@ -1,0 +1,196 @@
+[FUNC];0x400550;0x40057a;0x0000000000400550;_start
+[NOFUNC];0x400520;0x400520;0x0000000000400520;None
+[NOFUNC];0x400526;0x40052b;0x0000000000400526;None
+[NOFUNC];0x4004e0;0x4004e6;0x00000000004004e0;None
+[FUNC];0x400710;0x400775;0x0000000000400710;__libc_csu_init
+[NOFUNC];0x4004b8;0x4004c6;0x00000000004004b8;None
+[NOFUNC];0x4004cd;0x4004d1;0x00000000004004cd;None
+[FUNC];0x400710;0x400775;0x0000000000400741;__libc_csu_init
+[FUNC];0x400710;0x400775;0x0000000000400746;__libc_csu_init
+[FUNC];0x400620;0x400620;0x0000000000400620;frame_dummy
+[FUNC];0x400620;0x400620;0x000000000040062b;frame_dummy
+[FUNC];0x4005c0;0x4005c0;0x00000000004005c0;register_tm_clones
+[FUNC];0x4005c0;0x4005c0;0x00000000004005f8;register_tm_clones
+[FUNC];0x400710;0x400775;0x000000000040075d;__libc_csu_init
+[FUNC];0x400710;0x400775;0x0000000000400766;__libc_csu_init
+[FUNC];0x400646;0x400708;0x0000000000400646;main
+TAG  0x0000000000400646
+ +0    L3                      55                   push   rbp
+ +1    L3                      48 89 e5             mov    rbp, rsp
+ +4    L3                      48 83 ec 10          sub    rsp, 0x10
+ +8    L3                      64 48 8b 04 25 28 00 mov    rax, qword ptr [fs:0x28]
+                               00 00
+ +17   L3                      48 89 45 f8          mov    qword ptr [rbp-0x08], rax
+ +21   L3                      31 c0                xor    eax, eax
+ +23   L3                      bf 94 07 40 00       mov    edi, 0x00400794
+ +28   L3                      e8 89 fe ff ff       call   0x00000000004004f0
+END 0x0000000000400646
+
+[NOFUNC];0x4004f0;0x4004f0;0x00000000004004f0;None
+[NOFUNC];0x4004f6;0x4004fb;0x00000000004004f6;None
+[NOFUNC];0x4004e0;0x4004e6;0x00000000004004e0;None
+[FUNC];0x400646;0x400708;0x0000000000400667;main
+TAG  0x0000000000400667
+ +0    L3                      bf 9a 07 40 00       mov    edi, 0x0040079a
+ +5    L3                      e8 7f fe ff ff       call   0x00000000004004f0
+END 0x0000000000400667
+
+[FUNC];0x400646;0x400708;0x0000000000400671;main
+TAG  0x0000000000400671
+ +0    L3                      bf a4 07 40 00       mov    edi, 0x004007a4
+ +5    L3                      e8 75 fe ff ff       call   0x00000000004004f0
+END 0x0000000000400671
+
+[FUNC];0x400646;0x400708;0x000000000040067b;main
+TAG  0x000000000040067b
+ +0    L3                      bf b1 07 40 00       mov    edi, 0x004007b1
+ +5    L3                      e8 6b fe ff ff       call   0x00000000004004f0
+END 0x000000000040067b
+
+[FUNC];0x400646;0x400708;0x0000000000400685;main
+TAG  0x0000000000400685
+ +0    L3                      48 8d 45 f4          lea    rax, [rbp-0x0c]
+ +4    L3                      48 89 c6             mov    rsi, rax
+ +7    L3                      bf b6 07 40 00       mov    edi, 0x004007b6
+ +12   L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +17   L3                      e8 95 fe ff ff       call   0x0000000000400530
+END 0x0000000000400685
+
+[NOFUNC];0x400530;0x400530;0x0000000000400530;None
+[NOFUNC];0x400536;0x40053b;0x0000000000400536;None
+[FUNC];0x400646;0x400708;0x000000000040069b;main
+TAG  0x000000000040069b
+ +0    L3                      8b 45 f4             mov    eax, dword ptr [rbp-0x0c]
+ +3    L3                      83 f8 02             cmp    eax, 0x02
+ +6    L3                      74 16                jz     0x00000000004006b9
+END 0x000000000040069b
+
+[FUNC];0x400646;0x400708;0x00000000004006a3;main
+TAG  0x00000000004006a3
+ +0    L3                      83 f8 03             cmp    eax, 0x03
+ +3    L3                      74 1d                jz     0x00000000004006c5
+END 0x00000000004006a3
+
+[FUNC];0x400646;0x400708;0x00000000004006a8;main
+TAG  0x00000000004006a8
+ +0    L3                      83 f8 01             cmp    eax, 0x01
+ +3    L3                      75 24                jnz    0x00000000004006d1
+END 0x00000000004006a8
+
+[FUNC];0x400646;0x400708;0x00000000004006ad;main
+TAG  0x00000000004006ad
+ +0    L3                      bf b9 07 40 00       mov    edi, 0x004007b9
+ +5    L3                      e8 39 fe ff ff       call   0x00000000004004f0
+END 0x00000000004006ad
+
+[NOFUNC];0x4004f0;0x4004f0;0x00000000004004f0;None
+[FUNC];0x400646;0x400708;0x00000000004006b7;main
+TAG  0x00000000004006b7
+ +0    L3                      eb 28                jmp    0x00000000004006e1
+END 0x00000000004006b7
+
+[FUNC];0x400646;0x400708;0x00000000004006e1;main
+TAG  0x00000000004006e1
+ +0    L3                      8b 45 f4             mov    eax, dword ptr [rbp-0x0c]
+ +3    L3                      83 f8 03             cmp    eax, 0x03
+ +6    L3                      0f 85 70 ff ff ff    jnz    0x000000000040065d
+END 0x00000000004006e1
+
+[FUNC];0x400646;0x400708;0x000000000040065d;main
+TAG  0x000000000040065d
+ +0    L3                      bf 94 07 40 00       mov    edi, 0x00400794
+ +5    L3                      e8 89 fe ff ff       call   0x00000000004004f0
+END 0x000000000040065d
+
+[FUNC];0x400646;0x400708;0x0000000000400667;main
+TAG  0x0000000000400667
+ +0    L3                      bf 9a 07 40 00       mov    edi, 0x0040079a
+ +5    L3                      e8 7f fe ff ff       call   0x00000000004004f0
+END 0x0000000000400667
+
+[FUNC];0x400646;0x400708;0x0000000000400671;main
+TAG  0x0000000000400671
+ +0    L3                      bf a4 07 40 00       mov    edi, 0x004007a4
+ +5    L3                      e8 75 fe ff ff       call   0x00000000004004f0
+END 0x0000000000400671
+
+[FUNC];0x400646;0x400708;0x000000000040067b;main
+TAG  0x000000000040067b
+ +0    L3                      bf b1 07 40 00       mov    edi, 0x004007b1
+ +5    L3                      e8 6b fe ff ff       call   0x00000000004004f0
+END 0x000000000040067b
+
+[FUNC];0x400646;0x400708;0x0000000000400685;main
+TAG  0x0000000000400685
+ +0    L3                      48 8d 45 f4          lea    rax, [rbp-0x0c]
+ +4    L3                      48 89 c6             mov    rsi, rax
+ +7    L3                      bf b6 07 40 00       mov    edi, 0x004007b6
+ +12   L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +17   L3                      e8 95 fe ff ff       call   0x0000000000400530
+END 0x0000000000400685
+
+[NOFUNC];0x400530;0x400530;0x0000000000400530;None
+[FUNC];0x400646;0x400708;0x000000000040069b;main
+TAG  0x000000000040069b
+ +0    L3                      8b 45 f4             mov    eax, dword ptr [rbp-0x0c]
+ +3    L3                      83 f8 02             cmp    eax, 0x02
+ +6    L3                      74 16                jz     0x00000000004006b9
+END 0x000000000040069b
+
+[FUNC];0x400646;0x400708;0x00000000004006b9;main
+TAG  0x00000000004006b9
+ +0    L3                      bf bd 07 40 00       mov    edi, 0x004007bd
+ +5    L3                      e8 2d fe ff ff       call   0x00000000004004f0
+END 0x00000000004006b9
+
+[FUNC];0x400646;0x400708;0x00000000004006c3;main
+TAG  0x00000000004006c3
+ +0    L3                      eb 1c                jmp    0x00000000004006e1
+END 0x00000000004006c3
+
+[FUNC];0x400646;0x400708;0x00000000004006a3;main
+TAG  0x00000000004006a3
+ +0    L3                      83 f8 03             cmp    eax, 0x03
+ +3    L3                      74 1d                jz     0x00000000004006c5
+END 0x00000000004006a3
+
+[FUNC];0x400646;0x400708;0x00000000004006c5;main
+TAG  0x00000000004006c5
+ +0    L3                      bf c5 07 40 00       mov    edi, 0x004007c5
+ +5    L3                      e8 21 fe ff ff       call   0x00000000004004f0
+END 0x00000000004006c5
+
+[NOFUNC];0x4004f0;0x4004f0;0x00000000004004f0;None
+[FUNC];0x400646;0x400708;0x00000000004006cf;main
+TAG  0x00000000004006cf
+ +0    L3                      eb 10                jmp    0x00000000004006e1
+END 0x00000000004006cf
+
+[FUNC];0x400646;0x400708;0x00000000004006e1;main
+TAG  0x00000000004006e1
+ +0    L3                      8b 45 f4             mov    eax, dword ptr [rbp-0x0c]
+ +3    L3                      83 f8 03             cmp    eax, 0x03
+ +6    L3                      0f 85 70 ff ff ff    jnz    0x000000000040065d
+END 0x00000000004006e1
+
+[FUNC];0x400646;0x400708;0x00000000004006ed;main
+TAG  0x00000000004006ed
+ +0    L3                      b8 00 00 00 00       mov    eax, 0x00000000
+ +5    L3                      48 8b 55 f8          mov    rdx, qword ptr [rbp-0x08]
+ +9    L3                      64 48 33 14 25 28 00 xor    rdx, qword ptr [fs:0x28]
+                               00 00
+ +18   L3                      74 05                jz     0x0000000000400706
+END 0x00000000004006ed
+
+[FUNC];0x400646;0x400708;0x0000000000400706;main
+TAG  0x0000000000400706
+ +0    L3                      c9                   leave
+ +1    L3                      c3                   ret
+END 0x0000000000400706
+
+[FUNC];0x400600;0x400600;0x0000000000400600;__do_global_dtors_aux
+[FUNC];0x400600;0x400600;0x0000000000400609;__do_global_dtors_aux
+[FUNC];0x400580;0x400580;0x0000000000400580;deregister_tm_clones
+[FUNC];0x400580;0x400580;0x00000000004005b0;deregister_tm_clones
+[FUNC];0x400600;0x400600;0x0000000000400612;__do_global_dtors_aux
+[NOFUNC];0x400784;0x40078c;0x0000000000400784;None

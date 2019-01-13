@@ -1,33 +1,27 @@
-#include <stdio.h>
-#include <string.h>
+#include<stdio.h>
 
-#define msg_len 5
-
-char msgSecret[] = "This is the secret message";
-char msgDefault[] = "This is the default message";
-
-int print_secr() {
-  printf("Congrats! %s\n", msgSecret);
-  return 0;
-}
-
-int print_default(int num) {
-  int add;
-  add = num + 10;
-  printf("Hello! %s, the number is %d\n", msgDefault, add);
-  return 0;
-}
-
-int main(int argc, char **argv) {
-  char message[msg_len];
-  
-  printf("Please enter a message: \n"); 
-  fgets(message, msg_len, stdin);
+int main() {
+    int choice;
+    do {
+        printf("Menu\n\n");
+        printf("Add Movie\n");
+        printf("Search Movie\n");
+        printf("Exit\n");
+        scanf("%d", &choice);
  
-  if (strcmp(message, "test")){
-    print_default(12);
-  } else {
-  	print_secr();
-  }
-  return 0;
+        switch (choice) {
+            case 1:
+                printf("add\n");
+                break;
+            case 2:
+                printf("nSearch\n");
+                break;
+            case 3:
+                printf("goodbye\n");
+                break;
+            default:
+                printf("wrong choice.Enter Again");
+                break;
+        }
+    } while(choice !=3);
 }

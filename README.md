@@ -114,24 +114,42 @@ $ display crash_on_pc.png
 
 ### Report parsing
 
-Parse the report produced by [functrace](https://github.com/invictus1306/functrace), and graph generation.
+Parse the report produced by [functrace](https://github.com/invictus1306/functrace), and generate the graph.
 
-##### Generate report using *libtrace*
-
-```shell
-$ drrun -c libfunctrace.so -report_file ./tests/reports/report1 -disas_func main -- ./tests/reports/simple_test
-Please enter a message: 
-AAAA
-Hello! This is the default message, the number is 22
-```
-
-##### Run *beebug* for graph generation
+#### Generate report using *functrace*
 
 ```shell
-$ python3 beebug.py -i -r ./tests/reports/report1 -g tests/reports/report1
+$ drrun -c libfunctrace.so -report_file report -disas_func main -cbr -- ./tests/reports/simple_test
+Menu
+
+Add Movie
+Search Movie
+Exit
+1
+add
+Menu
+
+Add Movie
+Search Movie
+Exit
+2
+nSearch
+Menu
+
+Add Movie
+Search Movie
+Exit
+3
+goodbye
 ```
 
-[beebugreport](https://github.com/invictus1306/beebug/blob/master/tests/reports/report1.pdf)
+#### Run *beebug* for graph generation
+
+```shell
+$ python3 beebug.py -i -r ./tests/reports/report -g ./tests/reports/report
+```
+
+[beebugreport](https://github.com/invictus1306/beebug/blob/master/tests/reports/report.pdf)
 
 ## Future direction
 
