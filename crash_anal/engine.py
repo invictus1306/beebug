@@ -31,7 +31,7 @@ class Engine:
                 stack_report = "Stack error - Generally it could be exploitable, due to suspicious functions in the backtrace"
                 print(self.term_colors.red() + stack_report + self.term_colors.default())
                 self.print_crash_info()
-                return True
+                return stack_report
             return False
         except Exception as ex:
             print("stack_overf_libc - error type: %s" % ex)
@@ -50,7 +50,7 @@ class Engine:
                 crash_on_pc_report = "Crash on PC - Generally it is exploitable, the PC could be tainted"
                 print(self.term_colors.red() + crash_on_pc_report + self.term_colors.default())
                 self.print_crash_info()
-                return True
+                return crash_on_pc_report
             return False
         except Exception as ex:
             print("crash_on_pc - error type: %s" % ex)
@@ -68,7 +68,7 @@ class Engine:
                 crash_on_branch_report = "Crash on branch instruction - Generally it is exploitable, the branch address could be tainted"
                 print(self.term_colors.red() + crash_on_branch_report + self.term_colors.default())
                 self.print_crash_info()
-                return True
+                return crash_on_branch_report
             return False
         return False
 
@@ -87,7 +87,7 @@ class Engine:
                         else:
                             print(self.term_colors.red() + invalid_write_report + "Invalid write" + self.term_colors.default())
                         self.print_crash_info()
-                    return is_mem_write
+                    return invalid_write_report
             return False
         except Exception as ex:
             print("invalid_write - error type: %s" % ex)
@@ -100,10 +100,10 @@ class Engine:
         try:
             for i in suspicius_heap_functions:
                 if i in self.bt:
-                    stack_report = "Heap error - Generally it could be exploitable, due to suspicious functions in the backtrace"
-                    print(self.term_colors.red() + stack_report + self.term_colors.default())
+                    heap_report = "Heap error - Generally it could be exploitable, due to suspicious functions in the backtrace"
+                    print(self.term_colors.red() + heap_report + self.term_colors.default())
                     self.print_crash_info()
-                    return True
+                    return heap_report
             return False
         except Exception as ex:
             print("heap_error - error type: %s" % ex)
@@ -121,7 +121,7 @@ class Engine:
                         uaf_report = "It could be just a read access violation, but after few instruction there is a suspicious call, and if the address could be controlled by an attacker, it could lead to code execution"
                         print(self.term_colors.red() + uaf_report + self.term_colors.default())
                         self.print_crash_info()
-                        return True
+                        return uaf_report
                     return False
             return False
         except Exception as ex:

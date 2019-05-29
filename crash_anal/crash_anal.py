@@ -42,23 +42,29 @@ class CrashAnal:
         #check access violation signal
         if Checks.check_signal(signal):
 
-            if engine.stack_overf_libc():
-                return True
+            ret_exploitable = engine.stack_overf_libc()
+            if ret_exploitable:
+                return ret_exploitable
 
-            if engine.crash_on_pc():
-                return True
+            ret_exploitable = engine.crash_on_pc()
+            if ret_exploitable:
+                return ret_exploitable
 
-            if engine.crash_on_branch():
-                return True
+            ret_exploitable = engine.crash_on_branch()
+            if ret_exploitable:
+                return ret_exploitable
 
-            if engine.invalid_write():
-                return True
+            ret_exploitable = engine.invalid_write()
+            if ret_exploitable:
+                return ret_exploitable
 
-            if engine.heap_error():
-                return True
+            ret_exploitable = engine.heap_error()
+            if ret_exploitable:
+                return ret_exploitable
 
-            if engine.read_access_violation():
-                return True
+            ret_exploitable = engine.read_access_violation()
+            if ret_exploitable:
+                return ret_exploitable
 
         engine.not_exploitable()
         return False

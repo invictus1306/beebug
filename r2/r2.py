@@ -7,8 +7,8 @@ class radare2:
         self.r2_obj = None
 
     def open_file(self, filename):
-            self.r2_obj = r2pipe.open(filename)
-            return self.r2_obj
+        self.r2_obj = r2pipe.open(filename)
+        return self.r2_obj
 
     def cmd(self, command):
         return self.r2_obj.cmd(command)
@@ -26,7 +26,7 @@ class DebugCommands(radare2):
         self.r2_obj = r2_obj
 
     def debug_continue(self):
-        return super(DebugCommands, self).cmd("dc")
+        return super(DebugCommands, self).cmd('dc')
 
     def debug_break(self, address):
         return super(DebugCommands, self).cmd('db ' + address)

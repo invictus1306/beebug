@@ -25,11 +25,11 @@ class Arch:
         dict_x86_32 = {"stack_pointer": "esp", "base_pointer": "ebp", "program_counter": "eip"}
         dict_x86_64 = {"stack_pointer": "rsp", "base_pointer": "rbp", "program_counter": "rip"}
 
-        if self.arch == "x86" and self.bits == '32':
+        if "x86" in self.arch and "32" in self.bits:
             for key, value in dict_x86_32.items():
                 if key == name:
                     return value
-        elif self.arch == "x86" and self.bits == '64':
+        elif "x86" in self.arch and "64" in self.bits:
             for key, value in dict_x86_64.items():
                 if key == name:
                     return value
@@ -44,9 +44,9 @@ class Arch:
         x86_32_regs = ["eax", "ebx", "ecx", "edx", "esp", "ebp", "esi", "edi"]
         x86_64_regs = ["rax", "rbx", "rcx", "rdx", "rsp", "rbp", "rsi", "rdi"]
 
-        if self.arch == "x86" and self.bits == '32':
+        if "x86" in self.arch and "32" in self.bits:
             return x86_32_regs
-        elif self.arch == "x86" and self.bits == '64':
+        elif "x86" in self.arch and "64" in self.bits:
             return x86_64_regs
         else:
             print("Architecture not supported")

@@ -1,0 +1,10 @@
+[dynamorio]
+drrun               = /your_dr_path/bin64/drrun
+client              = /your_lib_path/libfunctrace.so
+[instrumentation]
+disassembly         = False
+disas_func          = main
+wrap_function       =
+wrap_function_args  = 0
+cbr                 = False
+verbose             = False
