@@ -139,9 +139,10 @@ verbose             = False
 ```
 
 ### Graph generation (no crash analysis)
-
+```shell
 $ python3 beebug.py -t ./tests/simple_crash -i -r report1 -g graph1 
 $ xpdf grap1
+```
 ![simplecrash](https://github.com/invictus1306/beebug/blob/master/images/simple_crash.pdf)
 
 ### Crash analysis + Graph generation
