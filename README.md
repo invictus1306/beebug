@@ -50,7 +50,7 @@ $ sudo pip3 install -r requirements.txt
 ```
 ## Simple DEMO
 
-![beebug](https://github.com/invictus1306/beebug/images/blob/master/beebug.gif)
+![beebug](https://github.com/invictus1306/beebug/blob/master/images/beebug.gif)
 
 ## Usage
 
