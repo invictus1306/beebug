@@ -143,7 +143,7 @@ verbose             = False
 $ python3 beebug.py -t ./tests/simple_crash -i -r report1 -g graph1 
 $ xpdf grap1
 ```
-![simplecrash](https://github.com/invictus1306/beebug/blob/master/images/simple_crash.pdf)
+![simplecrash](https://github.com/invictus1306/beebug/blob/master/images/graph1.pdf)
 
 ### Crash analysis + Graph generation
 ```shell
